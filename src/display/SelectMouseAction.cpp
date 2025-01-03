@@ -20,10 +20,10 @@
  /** @file SelectMouseAction.cpp */
 
 #include "SelectMouseAction.h"
-#include "DisplayGrid.h"
+#include "ADisplayGrid.h"
 
 
-SelectMouseAction::SelectMouseAction(DisplayGrid* parent, Display* watched)
+SelectMouseAction::SelectMouseAction(ADisplayGrid* parent, ADisplay* watched)
     : MouseAction(parent, watched) {
     m_watched->installEventFilter(this);
 }

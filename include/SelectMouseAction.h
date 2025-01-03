@@ -27,7 +27,7 @@
 class SelectMouseAction : public MouseAction
 {
 public:
-    explicit SelectMouseAction(DisplayGrid* parent = nullptr, Display* watched = nullptr);
+    explicit SelectMouseAction(ADisplayGrid* parent = nullptr, ADisplay* watched = nullptr);
     virtual ~SelectMouseAction();
     void Deselect(Display* m_watched);
 

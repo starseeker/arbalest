@@ -19,11 +19,11 @@
  */
 /** @file MoveCameraMouseAction.cpp */
 
-#include "DisplayGrid.h"
+#include "ADisplayGrid.h"
 #include "MoveCameraMouseAction.h"
 
 
-MoveCameraMouseAction::MoveCameraMouseAction(DisplayGrid* parent, Display* watched)
+MoveCameraMouseAction::MoveCameraMouseAction(ADisplayGrid* parent, ADisplay* watched)
     : MouseAction(parent, watched) {
     m_watched->installEventFilter(this);
 }
@@ -97,7 +97,7 @@ bool MoveCameraMouseAction::eventFilter(QObject* watched, QEvent* event) {
             ret = true;
         }
         else if (event->type() == QEvent::MouseButtonPress) {
-            m_parent->setActiveDisplay(m_watched);
+            m_parent->setActiveADisplay(m_watched);
 
             QMouseEvent* mouseButtonPressEvent = static_cast<QMouseEvent*>(event);
             prevMouseX = mouseButtonPressEvent->x();
